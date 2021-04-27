@@ -29,7 +29,7 @@ internal object CustomChat : Module(
     }
 
     private enum class TextMode {
-        NAME, ON_TOP, WEBSITE, JAPANESE, CUSTOM
+        NAME, ON_TOP, JAPANESE, CUSTOM
     }
 
     private val timer = TickTimer(TimeUnit.SECONDS)
@@ -55,10 +55,9 @@ internal object CustomChat : Module(
     }
 
     private fun getText() = when (textMode) {
-        TextMode.NAME -> "ᴋᴀᴍɪ ʙʟᴜᴇ"
-        TextMode.ON_TOP -> "ᴋᴀᴍɪ ʙʟᴜᴇ ᴏɴ ᴛᴏᴘ"
-        TextMode.WEBSITE -> "ｋａｍｉｂｌｕｅ．ｏｒｇ"
-        TextMode.JAPANESE -> "上にカミブルー"
+        TextMode.NAME -> "ᴷᴬᴹᴵ ᴿᴱᴰ"
+        TextMode.ON_TOP -> "ᴷᴬᴹᴵ ᴿᴱᴰ ᴼᴺ ᵀᴼᴾ"
+        TextMode.JAPANESE -> "上にカミ赤"
         TextMode.CUSTOM -> customText
     }
 

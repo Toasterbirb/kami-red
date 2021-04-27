@@ -47,8 +47,8 @@ internal object Capes : Module(
 ) {
     private val capeUsers = HashMap<UUID, Cape>().synchronized()
 
-    var updated = false; private set
-    var isPremium = false; private set
+    var updated = true; private set
+    var isPremium = true; private set
 
     private val gson = Gson()
     private val type = TypeToken.getArray(CapeUser::class.java).type

@@ -109,7 +109,8 @@ abstract class AbstractHudElement(
         COMBAT("Combat"),
         PLAYER("Player"),
         WORLD("World"),
-        MISC("Misc")
+        MISC("Misc"),
+        HIGHWAY("Highway")
     }
 
     protected companion object {
