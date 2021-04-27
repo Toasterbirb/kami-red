@@ -1,0 +1,10 @@
+{
+  "stable": {
+    "name": "2.05.00",
+    "url": "https://github.com/kami-blue/nightly-releases/releases/download/2.04.21-3c581c22b/kamiblue-2.04.21-3c581c22b.jar"
+  },
+  "beta": {
+    "name": "2.04.21-3c581c22b",
+    "url": "https://github.com/kami-blue/nightly-releases/releases/download/2.04.21-3c581c22b/kamiblue-2.04.21-3c581c22b.jar"
+  }
+}
