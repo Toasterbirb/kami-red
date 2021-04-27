@@ -10,15 +10,6 @@
           "primary": "9b90ff",
           "border": "8778ff"
         }
-      },
-      {
-        "cape_uuid": "0cc1c",
-        "player_uuid": "715964af-1a92-42c7-a484-e14981fe46e9",
-        "type": "CONTRIBUTOR",
-        "color": {
-          "primary": "333333",
-          "border": "211f1f"
-        }
       }
     ],
     "is_premium": true
