@@ -11,7 +11,7 @@ internal object GuiColors : Module(
     category = Category.CLIENT,
     alwaysEnabled = true
 ) {
-    private val primarySetting = setting("Primary Color", ColorHolder(111, 166, 222, 255))
+    private val primarySetting = setting("Primary Color", ColorHolder(208, 44, 81, 255))
     private val outlineSetting = setting("Outline Color", ColorHolder(88, 99, 111, 200))
     private val backgroundSetting = setting("Background Color", ColorHolder(30, 36, 48, 200))
     private val textSetting = setting("Text Color", ColorHolder(255, 255, 255, 255))

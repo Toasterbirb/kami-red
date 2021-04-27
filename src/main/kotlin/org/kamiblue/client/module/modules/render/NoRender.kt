@@ -174,6 +174,7 @@ internal object NoRender : Module(
         return true
     }
 
+
     fun renderFakeMap() {
         val tessellator = Tessellator.getInstance()
         val bufBuilder = tessellator.buffer
