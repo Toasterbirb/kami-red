@@ -33,7 +33,7 @@ internal object Step : Module(
     private val upStep = setting("Up Step", true)
     private val downStep = setting("Down Step", false)
     private val entityStep by setting("Entities", true)
-    private val height by setting("Height", 1.0f, 0.25f..2.0f, 0.25f)
+    private val height by setting("Height", 1.0f, 0.25f..20.0f, 0.25f)
     private val downSpeed by setting("Down Speed", 0.2f, 0.0f..1.0f, 0.05f)
     private val bindUpStep by setting("Bind Up Step", Bind())
     private val bindDownStep by setting("Bind Down Step", Bind())
