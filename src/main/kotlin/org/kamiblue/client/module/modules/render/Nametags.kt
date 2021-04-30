@@ -86,13 +86,13 @@ internal object Nametags : Module(
     private val bFilled = setting("Filled Blue", 64, 0..255, 1, { page.value == Page.FRAME && filled.value })
     private val aFilled = setting("Filled Alpha", 169, 0..255, 1, { page.value == Page.FRAME && filled.value })
     private val outline = setting("Outline", true, { page.value == Page.FRAME })
-    private val rOutline = setting("Outline Red", 155, 0..255, 1, { page.value == Page.FRAME && outline.value })
+    private val rOutline = setting("Outline Red", 255, 0..255, 1, { page.value == Page.FRAME && outline.value })
     private val gOutline = setting("Outline Green", 144, 0..255, 1, { page.value == Page.FRAME && outline.value })
-    private val bOutline = setting("Outline Blue", 255, 0..255, 1, { page.value == Page.FRAME && outline.value })
+    private val bOutline = setting("Outline Blue", 155, 0..255, 1, { page.value == Page.FRAME && outline.value })
     private val aOutline = setting("Outline Alpha", 240, 0..255, 1, { page.value == Page.FRAME && outline.value })
-    private val outlineWidth = setting("Outline Width", 2.0f, 0.0f..5.0f, 0.1f, { page.value == Page.FRAME && outline.value })
+    private val outlineWidth = setting("Outline Width", 1.0f, 0.0f..5.0f, 0.1f, { page.value == Page.FRAME && outline.value })
     private val margins = setting("Margins", 2.0f, 0.0f..10.0f, 0.1f, { page.value == Page.FRAME })
-    private val cornerRadius = setting("Corner Radius", 2.0f, 0.0f..10.0f, 0.1f, { page.value == Page.FRAME })
+    private val cornerRadius = setting("Corner Radius", 0.0f, 0.0f..10.0f, 0.1f, { page.value == Page.FRAME })
 
     /* Rendering settings */
     private val rText = setting("Text Red", 232, 0..255, 1, { page.value == Page.RENDERING })

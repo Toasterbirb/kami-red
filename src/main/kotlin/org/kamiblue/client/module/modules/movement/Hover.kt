@@ -1,5 +1,7 @@
 package org.kamiblue.client.module.modules.movement
 
+import net.minecraft.block.BlockCactus
+import net.minecraft.init.Blocks
 import net.minecraftforge.fml.common.gameevent.TickEvent
 import org.kamiblue.client.module.Module
 import org.kamiblue.client.module.Category

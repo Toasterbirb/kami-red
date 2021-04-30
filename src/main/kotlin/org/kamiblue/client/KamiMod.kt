@@ -23,11 +23,11 @@ class KamiMod {
     companion object {
         const val NAME = "KAMI Red"
         const val ID = "kamired"
-        const val DIRECTORY = "kamiblue/"
+        const val DIRECTORY = "kamired/"
 
-        const val VERSION = "2.06.xx-dev" // Used for debugging. R.MM.DD-hash format.
-        const val VERSION_SIMPLE = "2.06.00" // Shown to the user. R.MM.DD[-beta] format.
-        const val VERSION_MAJOR = "2.06.00" // Used for update checking. RR.MM.01 format.
+        const val VERSION = "2.04.xx-dev" // Used for debugging. R.MM.DD-hash format.
+        const val VERSION_SIMPLE = "2.04.30" // Shown to the user. R.MM.DD[-beta] format.
+        const val VERSION_MAJOR = "2.04.30" // Used for update checking. RR.MM.01 format.
         const val BUILD_NUMBER = -1 // Do not remove, currently unused but will be used in the future.
 
         const val APP_ID = "638403216278683661"
