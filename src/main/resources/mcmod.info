@@ -1,11 +1,11 @@
 [
   {
-    "modid": "kamiblue",
-    "name": "KAMI Blue",
-    "description": "カミブル \nA Minecraft utility mod for anarchy servers \nWritten by 086 and continued by l1ving\n",
+    "modid": "kamired",
+    "name": "KAMI Red",
+    "description": "カミレド \nA Minecraft utility mod for anarchy servers \nWritten by 086 and continued by l1ving\n",
     "version": "${version}",
     "mcversion": "1.12.2",
-    "url": "https://github.com/kami-blue/client",
+    "url": "https://github.com/toasterbirb/kami-red",
     "updateUrl": "",
     "authorList": [
       "086",
