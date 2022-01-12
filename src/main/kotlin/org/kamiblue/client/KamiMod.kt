@@ -25,10 +25,10 @@ class KamiMod {
         const val ID = "kamired"
         const val DIRECTORY = "kamired/"
 
-        const val VERSION = "2.04.xx-dev" // Used for debugging. R.MM.DD-hash format.
-        const val VERSION_SIMPLE = "2.04.30" // Shown to the user. R.MM.DD[-beta] format.
-        const val VERSION_MAJOR = "2.04.30" // Used for update checking. RR.MM.01 format.
-        const val BUILD_NUMBER = -1 // Do not remove, currently unused but will be used in the future.
+        const val VERSION = "3.01.12-f53f90c7" // Used for debugging. R.MM.DD-hash format.
+        const val VERSION_SIMPLE = "3.01.12-beta" // Shown to the user. R.MM.DD[-beta] format.
+        const val VERSION_MAJOR = "3.01.01" // Used for update checking. RR.MM.01 format.
+        const val BUILD_NUMBER = 896 // Do not remove, currently unused but will be used in the future.
 
         const val APP_ID = "638403216278683661"
 
