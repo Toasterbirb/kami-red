@@ -1,5 +1,5 @@
 #!/bin/sh
 ./gradlew build
-#mv ./build/reobfJar/output.jar ~/.minecraft/mods/kami-red.jar
-#rm ~/.minecraft/kamiblue/config/generic.bak
-#rm ~/.minecraft/kamiblue/config/generic.json
+mv ./build/reobfJar/output.jar  ~/.local/share/polymc/instances/1.12.2/.minecraft/mods/kamired.jar
+#rm -f ~/.minecraft/kamiblue/config/generic.bak
+#rm -f ~/.minecraft/kamiblue/config/generic.json

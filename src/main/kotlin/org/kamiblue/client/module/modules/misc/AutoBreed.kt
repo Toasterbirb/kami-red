@@ -1,5 +1,6 @@
 package org.kamiblue.client.module.modules.misc
 
+import net.minecraft.init.Items
 import net.minecraft.util.EnumHand
 import net.minecraft.entity.Entity
 import net.minecraft.entity.passive.*
@@ -10,8 +11,9 @@ import org.kamiblue.client.module.Module
 import org.kamiblue.client.util.TickTimer
 import org.kamiblue.client.util.TimeUnit
 import org.kamiblue.client.util.threads.safeListener
+import org.kamiblue.client.util.text.MessageSendHelper
 
-internal object Nametags : Module(
+internal object AutoBreed : Module(
     name = "AutoBreed",
     description = "Feeds food to animals nearby",
     category = Category.MISC
@@ -19,20 +21,25 @@ internal object Nametags : Module(
     private val cow by setting("Cow", true)
     private val sheep by setting("Sheep", true)
     private val chicken by setting("Chicken", true)
-    private val range by setting("Range", 2.0f, 1.0f..6.0f, 0.5f)
-    private val breedDelay by setting("Breed Delay", 5, 0..10, 1)
+    private val range by setting("Range", 2.0f, 1.0f..10.0f, 0.5f)
+    private val breedDelay by setting("Breed Delay", 5, 1..10, 1)
 
     private val breedTimer = TickTimer(TimeUnit.TICKS)
 
     init {
         safeListener<TickEvent.ClientTickEvent> {
-            if (breedTimer.tick(breedDelay)) {
-                world.loadedEntityList.asSequence()
-                .filter(::isValidEntity)
-                .minByOrNull { player.getDistance(it) }
-                ?.let {
-                    if (player.getDistance(it) < range) {
-                        playerController.interactWithEntity(player, it, EnumHand.MAIN_HAND)
+            if (breedTimer.tick(breedDelay) && player.heldItemMainhand.item == Items.WHEAT || player.heldItemMainhand.item == Items.WHEAT_SEEDS) {
+                val entitylist = world.loadedEntityList;
+            
+                for (e in entitylist) {
+                    if (player.getDistance(e) <= range) {
+                        if (e != player && isValidEntity(e)) {
+                            /* Check if the item in hand is correct */
+                            if ((e is EntityCow || e is EntitySheep) && player.heldItemMainhand.item != Items.WHEAT) continue
+                            if (e is EntityChicken && player.heldItemMainhand.item != Items.WHEAT_SEEDS) continue
+                            
+                            playerController.interactWithEntity(player, e, EnumHand.MAIN_HAND)
+                        }
                     }
                 }
             }

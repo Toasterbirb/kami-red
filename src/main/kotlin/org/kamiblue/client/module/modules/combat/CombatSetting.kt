@@ -68,6 +68,7 @@ internal object CombatSetting : Module(
     private val tamed = setting("Tamed Mobs", false, { page.value == Page.TARGETING && mobs.value })
     private val invisible = setting("Invisible", true, { page.value == Page.TARGETING })
     private val ignoreWalls = setting("Ignore Walls", false, { page.value == Page.TARGETING })
+    private val ignoreChildren = setting("Ignore Children", true, { page.value == Page.TARGETING })
     private val range = setting("Target Range", 16.0f, 2.0f..64.0f, 2.0f, { page.value == Page.TARGETING })
 
     /* In Combat */
@@ -241,6 +242,8 @@ internal object CombatSetting : Module(
                 && !EntityUtils.canEntityFeetBeSeen(entity)
                 && EntityUtils.canEntityHitboxBeSeen(entity) == null) continue
 
+            if (ignoreChildren.value && entity.isChild) continue
+            
             targetList.add(entity)
         }
 
